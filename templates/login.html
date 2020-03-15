@@ -1,0 +1,44 @@
+{% if messg %}
+    <script>
+        alert('{{ messg }}');
+    </script>
+{% endif %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{%  static 'favicon.ico'%}" type="image/ico">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+ <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">
+        <img src="{% static 'favicon.ico' %}" alt="Logo" style="width:40px;">
+        <span class="navbar-text">
+            Blood Request Management Application
+        </span>
+    </a>
+ </nav>
+ <br><br>
+    DONOR LOGIN
+    <form action="/donor" method="post" name="dlogin">
+        <b>E-Mail<br></b>
+        <input type="email" name="email" required><br>
+        <b>Password<br></b>
+        <input type="password" name="pass" required><br>
+        <button type="submit" name="submit">SUBMIT</button>
+        <button type="button" onclick="location.href='signup'">Sign Up</button>
+    </form>
+    <br><br>
+    HOSPITAL LOGIN
+    <form action="/hospital" method="post" name="hlogin">
+        <b>E-Mail<br></b>
+        <input type="email" name="email" required><br>
+        <b>Password<br></b>
+        <input type="password" name="pass" required><br>
+        <button type="submit" name="submit">SUBMIT</button>
+        <button type="button" onclick="location.href='signup'">Sign Up</button>
+    </form>
+</body>
+</html>

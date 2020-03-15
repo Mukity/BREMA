@@ -1,0 +1,78 @@
+{% if messg %}
+    <script>
+        alert('{{ messg }}');
+    </script>
+{% endif %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{%  static 'favicon.ico'%}" type="image/ico">
+    <title>BREMA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+ <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">
+        <img src="{% static 'favicon.ico' %}" alt="Logo" style="width:40px;">
+        <span class="navbar-text">
+            Blood Request Management Application
+        </span>
+    </a>
+ </nav>
+ <nav class="navbar navbar-expand-sm bg-dark navbar-light">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#home">About Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/requests">Blood Requests</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#contact">Contact Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#feedback">Feedback</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/login">Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/signup">Sign Up</a>
+    </li>
+  </ul>
+</nav>
+<a name="home">
+  <p>
+    BREMA is a facility that offers the option for the hospitals to post blood requests. The hospitals can manage their own
+    requests and also use the platform to monitor the flow of blood donated by donors and the one transfused to the patients.
+    Through the platform the hospitals are able to tell the blood levels in their Blood storage facility
+    Donors and guests can see blood requests posted by hospitals through the blood request tab.
+    This is a platform that also enables the hospitals to monitor the flow of blood(into the hospital and how much is transfused
+    to patients and when).
+  </p>
+</a>
+
+<a name="contact">
+  <table>
+    <tr><td>Contact Telephone Numbers:</td></tr>
+    <tr><td></td><td>+2542012345678</td></tr>
+    <tr><td></td><td>+2542087654321</td></tr>
+
+    <tr><td>BREMA E-mails: </td></tr>
+    <tr><td></td><td>brema@mail.com</td></tr>
+    <tr><td></td><td>brema@mailinator.com</td></tr>
+  </table>
+</a>
+
+<a name="feedback">
+  <form name="feedback" method="post" action="/Feedback_successful">
+    Full name: <input type="text" name="fullName" required><br><br>
+    E-mail: <input type="email" name="email" required><br><br>
+    Comment: <textarea name="comment" required></textarea><br><br>
+    <button type="submit" name="submit">SUBMIT</button>
+  </form>
+</a>
+<footer >Copyright &copy2020</footer>
+</body>
+</html>
