@@ -3,25 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="{%  static 'favicon.ico'%}" type="image/ico">
+    <link rel="stylesheet" href="{%  static 'css/requests.css'%}" type="text/css">
+    <link rel="script" href="{%  static 'js/requests.js'%}">
     <title>Blood Requests</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">
-        <img src="{% static 'favicon.ico' %}" alt="Logo" style="width:40px;">
-        <span class="navbar-text">
+<div id="navbar">
+        <img src="{% static 'favicon.ico' %}" alt="Logo" style="width:4vw;">
             Blood Request Management Application
-        </span>
-    </a>
- </nav>
-     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">
-            <label style="text-align: center">
-                Blood Requests
-            </label>
-        </a>
-    </nav>
+</div>
+<div id="title">
+    Blood Requests
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>Blood Request ID</th>
+        <th>Blood Group</th>
+        <th>Units Required</th>
+        <th>Hospital Name</th>
+        <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr id="tr">
+        <td id="brid"></td>
+        <td id="bgrp"></td>
+        <td id="units"></td>
+        <td id="hname"></td>
+        <td id="date"></td>
+    </tr>
+    </tbody>
+</table>
+
+
 {{requests}}
     <table border="1">
         <thead>

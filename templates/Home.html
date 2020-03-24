@@ -7,53 +7,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'js/home.js' %}">
     <link rel="icon" href="{%  static 'favicon.ico'%}" type="image/ico">
     <title>BREMA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">
-        <img src="{% static 'favicon.ico' %}" alt="Logo" style="width:40px;">
-        <span class="navbar-text">
-            Blood Request Management Application
-        </span>
-    </a>
- </nav>
- <nav class="navbar navbar-expand-sm bg-dark navbar-light">
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#home">About Us</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/requests">Blood Requests</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#contact">Contact Us</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#feedback">Feedback</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/login">Login</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/signup">Sign Up</a>
-    </li>
-  </ul>
+<nav id="bar">
+<nav id="topbar">
+    <img src="{% static 'favicon.ico' %}" alt="Logo" style="width:5.5vw;">
+    <label>Blood Request Management Application</label>
 </nav>
-<a name="home">
-  <p>
-    BREMA is a facility that offers the option for the hospitals to post blood requests. The hospitals can manage their own
-    requests and also use the platform to monitor the flow of blood donated by donors and the one transfused to the patients.
-    Through the platform the hospitals are able to tell the blood levels in their Blood storage facility
-    Donors and guests can see blood requests posted by hospitals through the blood request tab.
-    This is a platform that also enables the hospitals to monitor the flow of blood(into the hospital and how much is transfused
-    to patients and when).
-  </p>
-</a>
+<nav id="navbar">
+    <a class="nav-link" href="#home">About us</a>
+    <a class="nav-link" href="#contact">Contact us</a>
+    <a class="nav-link" href="#feedback">Feedback</a>
+    <a class="nav-link" href="/requests">Blood Requests</a>
+    <a class="nav-link" href="/login">Login</a>
+    <a class="nav-link" href="/signup">Sign Up</a>
+</nav>
+</nav><br>
 
+<div name="home" id="about">
+    <b><label>Who are we?</label></b>
+  <p>
+    We are a platform that allows hospitals once they login to:
+      <ul>
+        <li>Manage the flow of blood in the system</li>
+        <li>Manage blood requests on this platform</li>
+        <li>Observe the flow of blood in their hospitals</li>
+      </ul>
+  </p><br>
+    <b>NOTE: The blood requests on the request tab are posted by the hospitals</b><br>
+    <p>
+        Donors on the other hand can:
+        <ul>
+            <li>Update their donation schedules</li>
+        </ul>
+    </p>
+</div>
+<br><br><br>
 <a name="contact">
+    <b>For more information and enquiries you can contact us using the following phone or e-mail: </b>
   <table>
     <tr><td>Contact Telephone Numbers:</td></tr>
     <tr><td></td><td>+2542012345678</td></tr>
@@ -64,15 +60,19 @@
     <tr><td></td><td>brema@mailinator.com</td></tr>
   </table>
 </a>
-
+<br><br><br>
 <a name="feedback">
+    <b>For errors and comments please write us a feedback below:</b><br>
   <form name="feedback" method="post" action="/Feedback_successful">
-    Full name: <input type="text" name="fullName" required><br><br>
-    E-mail: <input type="email" name="email" required><br><br>
-    Comment: <textarea name="comment" required></textarea><br><br>
-    <button type="submit" name="submit">SUBMIT</button>
+      <header>Full name</header>
+      <input type="text" name="fullName" required>
+      <header>E-mail</header>
+      <input type="email" name="email" required>
+      <header>Comment</header>
+      <textarea name="comment" required></textarea>
+    <button type="submit" name="submit" style="background-color: #B22222; color: white; padding: 15px 32px; font-size: 1.5vw;">SUBMIT</button>
   </form>
 </a>
-<footer >Copyright &copy2020</footer>
+<footer >BREMA Copyright &copy2020</footer>
 </body>
 </html>

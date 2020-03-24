@@ -10,7 +10,7 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from firebase_admin import credentials, firestore
 
-from django.conf import settings
+import A
 
 config = {
     "apiKey": "AIzaSyCVnG5bxv732Z-wU7UtiWYikIGF1B1Re5U",
